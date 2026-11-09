@@ -1,0 +1,49 @@
+{
+  "name": "dsh-macos-widget",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "macOS desktop widgets for DSH: a loopback bridge plus a WidgetKit companion, surfaced as a Settings section.",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "macos/Shared",
+    "macos/QuotaWidget",
+    "macos/QuotaWidgetExtension",
+    "macos/project.yml",
+    "macos/build.sh",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "build:widget": "bash macos/build.sh"
+  },
+  "dependencies": {
+    "@deepseek-ai/schemastery": "^3.19.0"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "LI",
+    "url": "https://github.com/LXD-8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LXD-8/dsh-macos-widget.git"
+  }
+}

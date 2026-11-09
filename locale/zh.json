@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "macOS 小组件",
+    "description": "把 DSH 数据放到 macOS 桌面小组件：本机回环桥接 + WidgetKit 扩展。"
+  }
+}

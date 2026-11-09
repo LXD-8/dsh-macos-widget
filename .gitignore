@@ -1,0 +1,4 @@
+macos/build/
+macos/*.xcodeproj/
+node_modules/
+.DS_Store

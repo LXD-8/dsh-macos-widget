@@ -1,0 +1,66 @@
+name: DSHWidgets
+options:
+  bundleIdPrefix: local.dsh
+  deploymentTarget:
+    macOS: "14.0"
+  createIntermediateGroups: true
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    CODE_SIGN_STYLE: Manual
+    CODE_SIGN_IDENTITY: "-"
+    DEVELOPMENT_TEAM: ""
+    ENABLE_HARDENED_RUNTIME: NO
+    GENERATE_INFOPLIST_FILE: NO
+targets:
+  DSHWidgets:
+    type: application
+    platform: macOS
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: local.dsh.widgets
+    sources:
+      - path: QuotaWidget
+      - path: Shared
+    info:
+      path: QuotaWidget/Info.plist
+      properties:
+        CFBundleDisplayName: DSH Widgets
+        CFBundleShortVersionString: "0.1"
+        CFBundleVersion: "1"
+        LSMinimumSystemVersion: "14.0"
+        NSHumanReadableCopyright: ""
+        NSAppTransportSecurity:
+          NSAllowsLocalNetworking: true
+    entitlements:
+      path: QuotaWidget/QuotaWidget.entitlements
+      properties:
+        com.apple.security.app-sandbox: true
+        com.apple.security.network.client: true
+    dependencies:
+      - target: DSHWidgetsExtension
+        embed: true
+  DSHWidgetsExtension:
+    type: app-extension
+    platform: macOS
+    sources:
+      - path: QuotaWidgetExtension
+      - path: Shared
+    info:
+      path: QuotaWidgetExtension/Info.plist
+      properties:
+        CFBundleDisplayName: DSH Widgets
+        CFBundleShortVersionString: "0.1"
+        CFBundleVersion: "1"
+        NSAppTransportSecurity:
+          NSAllowsLocalNetworking: true
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.widgetkit-extension
+    entitlements:
+      path: QuotaWidgetExtension/QuotaWidgetExtension.entitlements
+      properties:
+        com.apple.security.app-sandbox: true
+        com.apple.security.network.client: true
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: local.dsh.widgets.WidgetExtension

@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "macOS Widgets",
+    "description": "Put DSH data on the macOS desktop: a loopback bridge plus a WidgetKit extension."
+  }
+}
