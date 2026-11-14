@@ -70,7 +70,7 @@ window.__ModuleLoader__.load({
 .dsh-mw-state { font-size: 13px; font-weight: 500; color: var(--dsw-alias-label-primary); }
 .dsh-mw-button { margin-left: auto; height: 28px; padding: 0 12px; border: 1px solid var(--dsw-alias-border-l2); border-radius: 14px; background: var(--dsw-alias-bg-layer-1); color: var(--dsw-alias-label-primary); font: inherit; font-size: 12px; cursor: pointer; }
 .dsh-mw-kv { display: flex; justify-content: space-between; gap: 16px; font-size: 12px; line-height: 18px; color: var(--dsw-alias-label-secondary); }
-.dsh-mw-kv code { font-family: var(--dsw-font-mono, ui-monospace, monospace); color: var(--dsw-alias-label-primary); }
+.dsh-mw-kv code { font-family: var(--ds-font-family-code, ui-monospace, monospace); color: var(--dsw-alias-label-primary); }
 .dsh-mw-error { margin: 0; font-size: 12px; color: #d93a32; }
 .dsh-mw-steps { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; font-size: 13px; line-height: 20px; color: var(--dsw-alias-label-primary); }
 .dsh-mw-h3 { margin: 4px 0 0; font-size: 13px; font-weight: 500; color: var(--dsw-alias-label-primary); }
